@@ -458,17 +458,16 @@ footer {
   margin: 35px 0;
 }
 
+.project-image {
+  margin: 35px auto;
+  max-width: 450px;
+  text-align: center;
+}
+
 .project-image img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 18px;
   border: 1px solid rgba(255,79,163,.3);
-}
-
-.image-caption {
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: .85rem;
-  text-align: center;
 }
