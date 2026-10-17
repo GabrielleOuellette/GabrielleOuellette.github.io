@@ -452,3 +452,23 @@ footer {
     gap: 4px;
   }
 }
+/* PROJECT IMAGES */
+
+.project-image {
+  margin: 35px 0;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid rgba(255,79,163,.3);
+}
+
+.image-caption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: .85rem;
+  text-align: center;
+}
