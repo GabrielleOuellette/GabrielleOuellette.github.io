@@ -611,3 +611,50 @@ footer {
   }
 }
 
+
+/* TETRA PROJECT OVERVIEW PDF */
+
+.tetra-document {
+  width: 100%;
+  margin: 25px 0 45px;
+  padding: clamp(18px, 4vw, 30px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+
+.tetra-document h3 {
+  margin: 12px 0;
+  font-size: 1.5rem;
+}
+
+.tetra-document p {
+  color: var(--muted);
+}
+
+.tetra-document iframe {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 55vw, 500px);
+  border: 1px solid rgba(255,79,163,.3);
+  border-radius: 12px;
+  background: white;
+  margin: 25px 0;
+}
+
+.tetra-document .btn {
+  display: inline-block;
+  max-width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .tetra-document iframe {
+    height: 320px;
+  }
+
+  .tetra-document .btn {
+    width: 100%;
+  }
+}
+
