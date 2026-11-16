@@ -556,19 +556,25 @@ footer {
 
 /* RESPONSIVE PHOTO GALLERY */
 
+
+/* TETRA PROJECT PHOTOS */
+
 .tetra-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin: 24px 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px auto;
+  width: 100%;
 }
 
 .tetra-gallery figure {
+  flex: 0 1 220px;
+  width: 220px;
+  max-width: 100%;
   margin: 0;
-  min-width: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   background: var(--surface-2);
   border: 1px solid rgba(255,79,163,.3);
   border-radius: 15px;
@@ -579,42 +585,29 @@ footer {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 300px;
+  max-height: 220px;
   object-fit: contain;
 }
 
-/* CENTER SINGLE PHOTOS */
+/* SINGLE PHOTO */
 
 .tetra-gallery.single-image {
-  grid-template-columns: minmax(0, 1fr);
-  max-width: 420px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* DOCUMENTATION BUTTON */
-
-.tetra-project > .btn {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   max-width: 100%;
-  text-align: center;
 }
 
-/* TABLETS AND SMALL WINDOWS */
+/* MOBILE */
 
 @media (max-width: 650px) {
-  .tetra-gallery {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    margin-left: auto;
-    margin-right: auto;
+  .tetra-gallery figure {
+    flex: 0 1 180px;
+    width: 180px;
   }
 
   .tetra-gallery img {
-    max-height: 260px;
+    max-height: 200px;
   }
+}
 
-  .tetra-project > .btn {
-    width: 100%;
-  }
 }
