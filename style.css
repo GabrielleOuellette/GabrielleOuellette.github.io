@@ -471,42 +471,58 @@ footer {
   border-radius: 18px;
   border: 1px solid rgba(255,79,163,.3);
 }
-/* BIOPRINTING MEDIA */
+/* RESPONSIVE BIOPRINTING MEDIA */
 
 .bioprint-media {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-  margin: 35px 0;
-  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 750px;
+  margin: 35px auto;
+  align-items: start;
 }
 
-.media-item {
+.bioprint-media .media-item {
+  min-width: 0;
   width: 100%;
   text-align: center;
 }
 
-.media-item img,
-.media-item video {
+.bioprint-media img,
+.bioprint-media video {
+  display: block;
   width: 100%;
-  max-height: 300px;
+  height: auto;
+  max-height: 320px;
   object-fit: contain;
   border-radius: 15px;
   border: 1px solid rgba(255,79,163,.3);
   background: #111116;
 }
 
-.image-caption {
+.bioprint-media .image-caption {
   color: var(--muted);
   font-size: .85rem;
   margin-top: 10px;
   text-align: center;
 }
 
-/* MOBILE */
+/* ADJUST BASED ON AVAILABLE SPACE */
+
+@container (max-width: 550px) {
+  .bioprint-media {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
+
+/* MOBILE AND SMALL WINDOWS */
 
 @media (max-width: 650px) {
   .bioprint-media {
     grid-template-columns: 1fr;
+    max-width: 350px;
+    gap: 30px;
   }
 }
