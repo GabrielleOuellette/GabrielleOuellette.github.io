@@ -380,10 +380,10 @@ footer {
 
 /* INDIVIDUAL PROJECT PAGES */
 
-.project-hero {
-  padding: 145px 0 70px;
+.project-content {
+  max-width: 800px;
+  container-type: inline-size;
 }
-
 .back {
   color: var(--pink);
   font-weight: 800;
